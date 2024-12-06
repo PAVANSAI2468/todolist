@@ -1,0 +1,155 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.App {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* Title */
+.App h1 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Input and Button Area */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Todo List */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e9ecef;
+}
+
+li input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+li p {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+li p.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Save and Edit Buttons */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+button.save {
+  background-color: #28a745;
+}
+
+button.save:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .App {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+}
